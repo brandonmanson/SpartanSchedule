@@ -47,6 +47,7 @@ class GamesTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.rowHeight = 120
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameReuseIdentifier", for: indexPath) as! GameTableViewCell
         
         let game = games[indexPath.row]
@@ -55,7 +56,6 @@ class GamesTableViewController: UITableViewController {
         cell.locationLabel.text = game.location
         cell.tvLabel.text = game.tv
         cell.radioLabel.text = game.radio
-        
 
         return cell
     }
